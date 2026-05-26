@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 import BookSetupForm from "@/components/BookSetupForm";
 import InvoiceForm from "@/components/InvoiceForm";
 import BooksList from "@/components/BooksList";
@@ -129,7 +130,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
-      <header className="border-b bg-card px-4 py-3 sm:px-6 sm:py-4 shrink-0">
+      <header className="border-b bg-card px-4 py-3 sm:px-6 sm:py-4 shrink-0 flex items-center gap-3">
+        <Image
+          src="/logo.jpeg"
+          alt="לוגו"
+          width={40}
+          height={40}
+          className="rounded-full object-cover shrink-0"
+        />
         <h1 className="text-xl sm:text-2xl font-bold tracking-tight">
           ספרי חשבוניות
         </h1>
