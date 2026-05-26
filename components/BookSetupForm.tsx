@@ -29,35 +29,35 @@ export default function BookSetupForm({ onSubmit }: Props) {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle className="text-xl">New Invoice Book</CardTitle>
+        <CardTitle className="text-xl">ספר חשבוניות חדש</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div className="flex flex-col gap-2">
-            <Label htmlFor="totalInvoices">Number of invoices in book</Label>
+            <Label htmlFor="totalInvoices">מספר חשבוניות בספר</Label>
             <Input
               id="totalInvoices"
               type="number"
               min={1}
-              placeholder="e.g. 8"
+              placeholder="לדוגמה: 8"
               value={totalInvoices}
               onChange={(e) => setTotalInvoices(e.target.value)}
               required
             />
           </div>
           <div className="flex flex-col gap-2">
-            <Label htmlFor="starterInvoiceNumber">Starting invoice number</Label>
+            <Label htmlFor="starterInvoiceNumber">מספר חשבונית התחלתי</Label>
             <Input
               id="starterInvoiceNumber"
               type="text"
-              placeholder="e.g. 100 or 1/1"
+              placeholder="לדוגמה: 100 או 1/1"
               value={starterInvoiceNumber}
               onChange={(e) => setStarterInvoiceNumber(e.target.value)}
               required
             />
           </div>
           <Button type="submit" className="w-full mt-1">
-            Start Filling Invoices
+            התחל מילוי חשבוניות
           </Button>
         </form>
       </CardContent>

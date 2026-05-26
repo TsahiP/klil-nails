@@ -33,7 +33,7 @@ export default function BooksList({
   if (books.length === 0) {
     return (
       <p className="text-muted-foreground text-sm text-center py-6">
-        No books yet. Fill your first book to see it here.
+        אין ספרים עדיין. מלא את הספר הראשון שלך כדי לראות אותו כאן.
       </p>
     );
   }
@@ -55,7 +55,7 @@ export default function BooksList({
           htmlFor="select-all"
           className="text-sm font-medium cursor-pointer select-none"
         >
-          {allSelected ? "Deselect All" : "Select All"}
+          {allSelected ? "בטל בחירת הכל" : "בחר הכל"}
         </label>
       </div>
 
@@ -85,7 +85,7 @@ export default function BooksList({
               >
                 <div className="flex items-center justify-between gap-2 flex-wrap">
                   <span className="text-sm font-medium">
-                    Book #{idx + 1} — starts{" "}
+                    ספר #{idx + 1} — מתחיל מ{" "}
                     <span className="font-mono">{book.starterInvoiceNumber}</span>
                   </span>
                   <Badge variant={isViewing ? "default" : "secondary"}>
@@ -107,15 +107,14 @@ export default function BooksList({
           <Separator />
           <div>
             <p className="text-sm font-semibold mb-3">
-              Book #{books.findIndex((b) => b.id === viewingBook.id) + 1} —
-              Invoices
+              ספר #{books.findIndex((b) => b.id === viewingBook.id) + 1} — חשבוניות
             </p>
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Invoice #</TableHead>
-                  <TableHead>Date</TableHead>
-                  <TableHead className="text-right">Price</TableHead>
+                  <TableHead>מס' חשבונית</TableHead>
+                  <TableHead>תאריך</TableHead>
+                  <TableHead className="text-left">סכום</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -123,7 +122,7 @@ export default function BooksList({
                   <TableRow key={inv.invoiceNumber}>
                     <TableCell>{inv.invoiceNumber}</TableCell>
                     <TableCell>{inv.date}</TableCell>
-                    <TableCell className="text-right">
+                    <TableCell className="text-left">
                       {inv.price.toFixed(2)}
                     </TableCell>
                   </TableRow>

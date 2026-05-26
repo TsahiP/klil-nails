@@ -34,10 +34,10 @@ export default function ExportButton({ books, selectedIds }: Props) {
       className="w-full"
     >
       {loading
-        ? "Exporting…"
+        ? "מייצא…"
         : count === 0
-        ? "Export (select books first)"
-        : `Export ${count} book${count > 1 ? "s" : ""} to XLSX`}
+        ? "ייצוא (בחר ספרים תחילה)"
+        : `ייצוא ${count} ספרים לקובץ XLSX`}
     </Button>
   );
 }

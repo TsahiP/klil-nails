@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Invoice Book",
-  description: "Track and export invoice books",
+  title: "ספר חשבוניות",
+  description: "מעקב וייצוא ספרי חשבוניות",
 };
 
 export default function RootLayout({
@@ -27,7 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="he"
+      dir="rtl"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>

@@ -59,7 +59,7 @@ export default function InvoiceForm({
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle className="text-xl">Invoice Details</CardTitle>
+        <CardTitle className="text-xl">פרטי חשבונית</CardTitle>
         <Badge variant="secondary">
           {progress} / {totalInvoices}
         </Badge>
@@ -75,18 +75,18 @@ export default function InvoiceForm({
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div className="flex flex-col gap-2">
-            <Label htmlFor="invoiceNumber">Invoice Number</Label>
+            <Label htmlFor="invoiceNumber">מספר חשבונית</Label>
             <Input
               id="invoiceNumber"
               type="text"
-              placeholder="e.g. 100 or 100/1"
+              placeholder="לדוגמה: 100 או 100/1"
               value={invoiceNumber}
               onChange={(e) => setInvoiceNumber(e.target.value)}
               required
             />
           </div>
           <div className="flex flex-col gap-2">
-            <Label htmlFor="date">Date</Label>
+            <Label htmlFor="date">תאריך</Label>
             <Input
               id="date"
               type="date"
@@ -96,7 +96,7 @@ export default function InvoiceForm({
             />
           </div>
           <div className="flex flex-col gap-2">
-            <Label htmlFor="price">Price</Label>
+            <Label htmlFor="price">סכום</Label>
             <Input
               id="price"
               type="number"
@@ -109,7 +109,7 @@ export default function InvoiceForm({
             />
           </div>
           <Button type="submit" className="w-full mt-1">
-            {isLast ? "Finish Book" : "Next Invoice →"}
+            {isLast ? "סיים ספר" : "→ חשבונית הבאה"}
           </Button>
         </form>
       </CardContent>

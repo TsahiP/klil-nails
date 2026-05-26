@@ -87,10 +87,10 @@ export default function Home() {
   const sidebarContent = (
     <>
       <div className="flex items-center justify-between">
-        <h2 className="text-base font-semibold">Previous Books</h2>
+        <h2 className="text-base font-semibold">ספרים קודמים</h2>
         {books.length > 0 && (
           <span className="text-xs text-muted-foreground">
-            {books.length} book{books.length !== 1 ? "s" : ""}
+            {books.length} ספרים
           </span>
         )}
       </div>
@@ -131,7 +131,7 @@ export default function Home() {
       {/* Header */}
       <header className="border-b bg-card px-4 py-3 sm:px-6 sm:py-4 shrink-0">
         <h1 className="text-xl sm:text-2xl font-bold tracking-tight">
-          Invoice Books
+          ספרי חשבוניות
         </h1>
       </header>
 
@@ -146,7 +146,7 @@ export default function Home() {
               : "text-muted-foreground"
           }`}
         >
-          {view === "invoices" ? "Fill Invoice" : "New Book"}
+          {view === "invoices" ? "מילוי חשבונית" : "ספר חדש"}
         </button>
         <button
           type="button"
@@ -157,9 +157,9 @@ export default function Home() {
               : "text-muted-foreground"
           }`}
         >
-          Books
+          ספרים
           {books.length > 0 && (
-            <span className="ml-1.5 rounded-full bg-muted px-1.5 py-0.5 text-xs">
+            <span className="mr-1.5 rounded-full bg-muted px-1.5 py-0.5 text-xs">
               {books.length}
             </span>
           )}
